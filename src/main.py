@@ -115,10 +115,7 @@ def handle_hello():
 @app.route('/test')
 def test():
 
-    person = Person.query.filter_by(email='ooohhh').first()
-    if not person:
-        raise APIException('Person not found')
-    return jsonify(person.serialize())
+    
     return jsonify({'msg':'exactly'})
 
 
